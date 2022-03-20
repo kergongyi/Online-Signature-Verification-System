@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,7 +27,8 @@ namespace Loading_signatures
         double x_shift=0;
         double y_shift=0;
         double check=0;
-
+        double trace=0;
+        double totalcost_x=0;
         public MainWindow()
         {
             InitializeComponent();
@@ -176,7 +178,7 @@ namespace Loading_signatures
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //read x coordinates from files
+            //read coordinates from files
             string signer1;
             string signer2;
             string signature1;
@@ -230,8 +232,65 @@ namespace Loading_signatures
                     }
 
                     //Initialize the cost matrix
-                    double[,]cost = new double[First_x.Length,Second_x.Length];
+                    double[,] cost = new double[First_x.Length + 1, Second_x.Length + 1];
+                    for (int x = 0; x < First_x.Length + 1; x++)
+                    {
+                        for (int y = 0; y < Second_x.Length + 1; y++)
+                        {
+                            cost[x, y] = 0;
+                        }
+                    }
+                    for (int m = 1; m < First_x.Length + 1; m++)
+                    {
+                        cost[m, 0] = double.MaxValue;
+                    }
+                    for (int n = 1; n < Second_x.Length + 1; n++)
+                    {
+                        cost[0, n] = double.MaxValue;
+                    }
 
+                    //Fill the cost matrix while keeping traceback information
+                    double[,] traceback = new double[First_x.Length, Second_x.Length];
+                    for (int x = 0; x < First_x.Length; x++)
+                    {
+                        for (int y = 0; y < Second_x.Length; y++)
+                        {
+                            traceback[x, y] = 0;
+                        }
+                    }
+                    for (int x = 0; x < First_x.Length; x++)
+                    {
+                        for (int y = 0; y < Second_x.Length; y++)
+                        {
+                            double minimum = Findminimum(cost[x, y], cost[x, y + 1], cost[x + 1, y]);
+                            double distance = Finddistance(First_x[x], Second_x[y]);
+                            cost[x + 1, y + 1] = distance + minimum;
+                            traceback[x, y] = trace;
+                        }
+                    }
+
+                      //Traceback from botton right
+                      int p = First_x.Length - 1;
+                      int q = Second_x.Length - 1;
+                      
+                      while ( p > 0 || q > 0 )
+                      {
+                          totalcost_x = totalcost_x + cost[p+1,q+1];
+                          if (traceback[p, q] == 0) //Match
+                          {
+                              p = p - 1;
+                              q = q - 1;
+                          }
+                          else if(traceback[p, q] == 1) //Insertion
+                          {
+                              p = p - 1;
+                          }
+                          else if(traceback[p, q] == 2) // Deletion
+                          {
+                              q = q - 1;
+                          }
+                      }
+                    MessageBox.Show(totalcost_x.ToString());
                 }
                 catch (IOException error)
                 {
@@ -241,6 +300,36 @@ namespace Loading_signatures
             else
             {
                 MessageBox.Show("Please do not forget to select both Signer and Signature");
+            }
+        }
+
+        private double Findminimum(double x, double y, double z)
+        {
+            double minimum = x;
+            trace = 0;
+            if (minimum > y)
+            {
+                minimum = y;
+                trace = 1;
+            }
+            if (minimum > z)
+            {
+                minimum = z;
+                trace = 2;
+            }
+            return minimum;
+        }
+
+        private double Finddistance(double x, double y)
+        {
+            double distance = x - y;
+            if (distance > 0)
+            {
+                return distance;
+            }
+            else
+            {
+                return -distance;
             }
         }
     }
