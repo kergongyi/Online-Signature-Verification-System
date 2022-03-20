@@ -1,0 +1,199 @@
+﻿<Window x:Class="Loading_signatures.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Loading_signatures"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1437">
+    <Grid>
+        <Button Name="Load" Content="Load" HorizontalAlignment="Left" Margin="70,34,0,0" VerticalAlignment="Top" Height="34" Width="190" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="80,92,0,0" Text="Signer:" TextWrapping="Wrap" VerticalAlignment="Top" Width="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="202,92,0,0" Text="Signature:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox Name="Signer" HorizontalAlignment="Left" Margin="45,125,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Signer 1"/>
+            <ComboBoxItem Content="Signer 2"/>
+            <ComboBoxItem Content="Signer 3"/>
+            <ComboBoxItem Content="Signer 4"/>
+            <ComboBoxItem Content="Signer 5"/>
+            <ComboBoxItem Content="Signer 6"/>
+            <ComboBoxItem Content="Signer 7"/>
+            <ComboBoxItem Content="Signer 8"/>
+            <ComboBoxItem Content="Signer 9"/>
+            <ComboBoxItem Content="Signer 10"/>
+            <ComboBoxItem Content="Signer 11"/>
+            <ComboBoxItem Content="Signer 12"/>
+            <ComboBoxItem Content="Signer 13"/>
+            <ComboBoxItem Content="Signer 14"/>
+            <ComboBoxItem Content="Signer 15"/>
+            <ComboBoxItem Content="Signer 16"/>
+            <ComboBoxItem Content="Signer 17"/>
+            <ComboBoxItem Content="Signer 18"/>
+            <ComboBoxItem Content="Signer 19"/>
+            <ComboBoxItem Content="Signer 20"/>
+            <ComboBoxItem Content="Signer 21"/>
+            <ComboBoxItem Content="Signer 22"/>
+            <ComboBoxItem Content="Signer 23"/>
+            <ComboBoxItem Content="Signer 24"/>
+            <ComboBoxItem Content="Signer 25"/>
+            <ComboBoxItem Content="Signer 26"/>
+            <ComboBoxItem Content="Signer 27"/>
+            <ComboBoxItem Content="Signer 28"/>
+            <ComboBoxItem Content="Signer 29"/>
+            <ComboBoxItem Content="Signer 30"/>
+            <ComboBoxItem Content="Signer 31"/>
+            <ComboBoxItem Content="Signer 32"/>
+            <ComboBoxItem Content="Signer 33"/>
+            <ComboBoxItem Content="Signer 34"/>
+            <ComboBoxItem Content="Signer 35"/>
+            <ComboBoxItem Content="Signer 36"/>
+            <ComboBoxItem Content="Signer 37"/>
+            <ComboBoxItem Content="Signer 38"/>
+            <ComboBoxItem Content="Signer 39"/>
+            <ComboBoxItem Content="Signer 40"/>
+        </ComboBox>
+        <ComboBox Name="Signature" HorizontalAlignment="Left" Margin="171,125,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Signature 1"/>
+            <ComboBoxItem Content="Signature 2"/>
+            <ComboBoxItem Content="Signature 3"/>
+            <ComboBoxItem Content="Signature 4"/>
+            <ComboBoxItem Content="Signature 5"/>
+            <ComboBoxItem Content="Signature 6"/>
+            <ComboBoxItem Content="Signature 7"/>
+            <ComboBoxItem Content="Signature 8"/>
+            <ComboBoxItem Content="Signature 9"/>
+            <ComboBoxItem Content="Signature 10"/>
+            <ComboBoxItem Content="Signature 11"/>
+            <ComboBoxItem Content="Signature 12"/>
+            <ComboBoxItem Content="Signature 13"/>
+            <ComboBoxItem Content="Signature 14"/>
+            <ComboBoxItem Content="Signature 15"/>
+            <ComboBoxItem Content="Signature 16"/>
+            <ComboBoxItem Content="Signature 17"/>
+            <ComboBoxItem Content="Signature 18"/>
+            <ComboBoxItem Content="Signature 19"/>
+            <ComboBoxItem Content="Signature 20"/>
+            <ComboBoxItem Content="Signature 21"/>
+            <ComboBoxItem Content="Signature 22"/>
+            <ComboBoxItem Content="Signature 23"/>
+            <ComboBoxItem Content="Signature 24"/>
+            <ComboBoxItem Content="Signature 25"/>
+            <ComboBoxItem Content="Signature 26"/>
+            <ComboBoxItem Content="Signature 27"/>
+            <ComboBoxItem Content="Signature 28"/>
+            <ComboBoxItem Content="Signature 29"/>
+            <ComboBoxItem Content="Signature 30"/>
+            <ComboBoxItem Content="Signature 31"/>
+            <ComboBoxItem Content="Signature 32"/>
+            <ComboBoxItem Content="Signature 33"/>
+            <ComboBoxItem Content="Signature 34"/>
+            <ComboBoxItem Content="Signature 35"/>
+            <ComboBoxItem Content="Signature 36"/>
+            <ComboBoxItem Content="Signature 37"/>
+            <ComboBoxItem Content="Signature 38"/>
+            <ComboBoxItem Content="Signature 39"/>
+            <ComboBoxItem Content="Signature 40"/>
+        </ComboBox>
+        <Canvas Name="Canvas" HorizontalAlignment="Left" Height="208" Margin="296,24,0,0" VerticalAlignment="Top" Width="494"/>
+        <TextBlock HorizontalAlignment="Left" Margin="310,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"><Run Language="zh-cn" Text="B"/><Run Text="efore preprocessing"/><Run Language="zh-cn" Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="310,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183"><Run Language="zh-cn" Text="A"/><Run Text="fter preprocessing"/><Run Language="zh-cn" Text=":"/></TextBlock>
+        <Canvas Name="Canvas2" HorizontalAlignment="Left" Height="208" Margin="297,279,0,0" VerticalAlignment="Top" Width="493"/>
+        <Slider Name="Xscale" HorizontalAlignment="Left" Margin="50,227,0,0" VerticalAlignment="Top" Width="246" Value="1" Maximum="2" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="ScaleX:"/></TextBlock>
+        <Slider Name="Yscale" HorizontalAlignment="Left" Margin="50,292,0,0" VerticalAlignment="Top" Width="243" Maximum="2" Value="1" ValueChanged="Yscale_ValueChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="ScaleY:"/></TextBlock>
+        <Slider Name="Xshift" HorizontalAlignment="Left" Margin="50,344,0,0" VerticalAlignment="Top" Width="241" Maximum="4000" ValueChanged="Xshift_ValueChanged" Minimum="-1000" LargeChange="1000"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Shif"/><Run Language="zh-cn" Text="t"/><Run Text="X:"/></TextBlock>
+        <Slider Name="Yshift" HorizontalAlignment="Left" Margin="50,408,0,0" VerticalAlignment="Top" Width="241" ValueChanged="Slider_ValueChanged_1" Maximum="4000" Minimum="-1000" LargeChange="1000"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="ShiftY:"/></TextBlock>
+        <Button Content="Dynamic time warping Algorithm
+                " HorizontalAlignment="Left" Height="34" Margin="823,34,0,0" VerticalAlignment="Top" Width="204" Click="Button_Click_1"/>
+        <ComboBox Name="Signer2" HorizontalAlignment="Left" Margin="805,125,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Signer 1"/>
+            <ComboBoxItem Content="Signer 2"/>
+            <ComboBoxItem Content="Signer 3"/>
+            <ComboBoxItem Content="Signer 4"/>
+            <ComboBoxItem Content="Signer 5"/>
+            <ComboBoxItem Content="Signer 6"/>
+            <ComboBoxItem Content="Signer 7"/>
+            <ComboBoxItem Content="Signer 8"/>
+            <ComboBoxItem Content="Signer 9"/>
+            <ComboBoxItem Content="Signer 10"/>
+            <ComboBoxItem Content="Signer 11"/>
+            <ComboBoxItem Content="Signer 12"/>
+            <ComboBoxItem Content="Signer 13"/>
+            <ComboBoxItem Content="Signer 14"/>
+            <ComboBoxItem Content="Signer 15"/>
+            <ComboBoxItem Content="Signer 16"/>
+            <ComboBoxItem Content="Signer 17"/>
+            <ComboBoxItem Content="Signer 18"/>
+            <ComboBoxItem Content="Signer 19"/>
+            <ComboBoxItem Content="Signer 20"/>
+            <ComboBoxItem Content="Signer 21"/>
+            <ComboBoxItem Content="Signer 22"/>
+            <ComboBoxItem Content="Signer 23"/>
+            <ComboBoxItem Content="Signer 24"/>
+            <ComboBoxItem Content="Signer 25"/>
+            <ComboBoxItem Content="Signer 26"/>
+            <ComboBoxItem Content="Signer 27"/>
+            <ComboBoxItem Content="Signer 28"/>
+            <ComboBoxItem Content="Signer 29"/>
+            <ComboBoxItem Content="Signer 30"/>
+            <ComboBoxItem Content="Signer 31"/>
+            <ComboBoxItem Content="Signer 32"/>
+            <ComboBoxItem Content="Signer 33"/>
+            <ComboBoxItem Content="Signer 34"/>
+            <ComboBoxItem Content="Signer 35"/>
+            <ComboBoxItem Content="Signer 36"/>
+            <ComboBoxItem Content="Signer 37"/>
+            <ComboBoxItem Content="Signer 38"/>
+            <ComboBoxItem Content="Signer 39"/>
+            <ComboBoxItem Content="Signer 40"/>
+        </ComboBox>
+        <ComboBox Name="Signature2" HorizontalAlignment="Left" Margin="930,125,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Signature 1"/>
+            <ComboBoxItem Content="Signature 2"/>
+            <ComboBoxItem Content="Signature 3"/>
+            <ComboBoxItem Content="Signature 4"/>
+            <ComboBoxItem Content="Signature 5"/>
+            <ComboBoxItem Content="Signature 6"/>
+            <ComboBoxItem Content="Signature 7"/>
+            <ComboBoxItem Content="Signature 8"/>
+            <ComboBoxItem Content="Signature 9"/>
+            <ComboBoxItem Content="Signature 10"/>
+            <ComboBoxItem Content="Signature 11"/>
+            <ComboBoxItem Content="Signature 12"/>
+            <ComboBoxItem Content="Signature 13"/>
+            <ComboBoxItem Content="Signature 14"/>
+            <ComboBoxItem Content="Signature 15"/>
+            <ComboBoxItem Content="Signature 16"/>
+            <ComboBoxItem Content="Signature 17"/>
+            <ComboBoxItem Content="Signature 18"/>
+            <ComboBoxItem Content="Signature 19"/>
+            <ComboBoxItem Content="Signature 20"/>
+            <ComboBoxItem Content="Signature 21"/>
+            <ComboBoxItem Content="Signature 22"/>
+            <ComboBoxItem Content="Signature 23"/>
+            <ComboBoxItem Content="Signature 24"/>
+            <ComboBoxItem Content="Signature 25"/>
+            <ComboBoxItem Content="Signature 26"/>
+            <ComboBoxItem Content="Signature 27"/>
+            <ComboBoxItem Content="Signature 28"/>
+            <ComboBoxItem Content="Signature 29"/>
+            <ComboBoxItem Content="Signature 30"/>
+            <ComboBoxItem Content="Signature 31"/>
+            <ComboBoxItem Content="Signature 32"/>
+            <ComboBoxItem Content="Signature 33"/>
+            <ComboBoxItem Content="Signature 34"/>
+            <ComboBoxItem Content="Signature 35"/>
+            <ComboBoxItem Content="Signature 36"/>
+            <ComboBoxItem Content="Signature 37"/>
+            <ComboBoxItem Content="Signature 38"/>
+            <ComboBoxItem Content="Signature 39"/>
+            <ComboBoxItem Content="Signature 40"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="837,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="Signer:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="962,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="Signature:"/></TextBlock>
+
+    </Grid>
+</Window>
