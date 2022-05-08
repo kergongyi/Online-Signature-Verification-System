@@ -194,6 +194,14 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="837,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="Signer:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="962,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="Signature:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="805,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="DTWX:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="805,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="zh-cn" Text="DTWY:"/><LineBreak/><Run Language="zh-cn"/></TextBlock>
+        <TextBlock Name="DTWX" HorizontalAlignment="Left" Margin="857,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193"/>
+        <TextBlock Name="DTWY" HorizontalAlignment="Left" Margin="857,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="14" Width="193"/>
+        <Canvas Name="Canvas3" HorizontalAlignment="Left" Height="316" Margin="795,259,0,0" VerticalAlignment="Top" Width="632"/>
+        <CheckBox Name = "Shift" Content="Shift" Margin="1074,124,289,440"/>
+        <CheckBox Name = "Scale" Content="Scale" Margin="1074,150,289,414"/>
+        <Button Content="Opensystem" HorizontalAlignment="Left" Height="34" Margin="1111,34,0,0" VerticalAlignment="Top" Width="204" Click="Button_Click_2"/>
 
     </Grid>
 </Window>
